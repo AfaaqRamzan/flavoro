@@ -1,7 +1,15 @@
 import React from "react";
 
+import CategoryMenu from "../components/CategoryMenu";
+import Navbar from "../components/NavBar";
 const Home = () => {
-  return <div className="text-3xl font-bold ">Hello World!</div>;
+  return (
+    <>
+      <Navbar />
+      <CategoryMenu />
+ 
+    </>
+  );
 };
 
 export default Home;
