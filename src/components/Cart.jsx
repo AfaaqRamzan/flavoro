@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
+import CartItems from "./CartItems";
 
 const Cart = () => {
   return (
@@ -14,6 +15,8 @@ const Cart = () => {
           <span className="text-xl font-bold text-gray-800">My Order</span>
           <IoMdClose className="border-2 border-gray-600 text-gray-600 font-bold  p-1 text-xl  rounded-md hover:text-red-300 hover:border-red-300 cursor-pointer" />
         </div>
+
+        <CartItems />
 
         <div className="absolute bottom-0 ">
           <h3 className="font-semibold text-gray-800">Items : </h3>
