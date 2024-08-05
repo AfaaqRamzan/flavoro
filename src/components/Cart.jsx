@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import { FaShoppingCart } from "react-icons/fa";
 import CartItems from "./CartItems";
+import { useSelector } from "react-redux";
 
 const Cart = () => {
+
+  const cartItems = useSelector((state)=>state.cart.cart);
+  console.log(cartItems);
+
   return (
     <>
       <div
