@@ -16,6 +16,9 @@ const CartItems = ({ id, name, img, qty, price }) => {
       <MdDelete
         onClick={() => {
           dispatch(removeFromCart({ id, img, name, price, qty }));
+          toast(`${name} Removed!`, {
+            icon: "👋",
+          });
         }}
         className="absolute right-7 text-gray-600 cursor-pointer"
       />
