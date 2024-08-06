@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 
 const CategoryMenu = () => {
   const [categories, setCategories] = useState([]);
@@ -15,6 +16,8 @@ const CategoryMenu = () => {
     listUniqueCategories();
   }, []);
 
+  const dispatch = useDispatch();
+
   return (
     <div className="ml-6">
       <h3 className="text-xl font-semibold">Find the best food</h3>
@@ -22,6 +25,7 @@ const CategoryMenu = () => {
         {categories.map(() => {
           return (
             <button
+              onClick={() => dispatch(setCategories(category))}
               key={index}
               className="px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-500 hover:text-white "
             >
